@@ -2,7 +2,7 @@
 
 The official Jekyll version of the Clean Blog theme by [Start Bootstrap](http://startbootstrap.com/).
 
-###[View Live Demo &rarr;](http://ironsummitmedia.github.io/startbootstrap-clean-blog-jekyll/)
+###[Kei's blog](http://keiwu.me/)
 
 ## Before You Begin
 
