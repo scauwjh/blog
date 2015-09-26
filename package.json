@@ -1,9 +1,9 @@
 {
-    "name": "clean-blog",
-    "title": "Clean Blog",
+    "name": "Kei's blog",
+    "title": "Kei's Blog",
     "version": "1.0.0",
-    "homepage": "http://startbootstrap.com",
-    "author": "Start Bootstrap",
+    "homepage": "http://keiwu.me",
+    "author": "Kei Wu",
     "license": {
         "type": "Apache 2.0",
         "url": "https://github.com/scauwjh/blog/gh-pages/LICENSE"
