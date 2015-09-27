@@ -1,4 +1,4 @@
-#Clean Blog by Start Bootstrap - Jekyll Version
+#Kei's blog
 
 The official Jekyll version of the Clean Blog theme by [Start Bootstrap](http://startbootstrap.com/).
 
