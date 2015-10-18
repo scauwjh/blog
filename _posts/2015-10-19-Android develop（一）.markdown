@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Android开发学习笔记（一）"
-subtitle:   "安卓开发学习笔记，布局和基本事件的学习"
+subtitle:   "布局和基本事件的学习"
 date:       2015-10-19 01:08:00
 author:     "Kei Wu"
 header-img: "img/post-bg-06.jpg"
@@ -14,3 +14,5 @@ header-img: "img/post-bg-06.jpg"
 
 ##### 正文：
 > 睡觉了，有空再写（笑）
+> 现在进度的样张（仅仅是UI而已）
+> ![](https://raw.githubusercontent.com/scauwjh/kmusic/master/sample/2015-10-18.jpg)
