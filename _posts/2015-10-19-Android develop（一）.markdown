@@ -3,7 +3,7 @@ layout:     post
 title:      "Android开发学习笔记（一）"
 subtitle:   "安卓开发学习笔记，布局和基本事件的学习"
 date:       2015-10-19 01:08:00
-author:     "Start Bootstrap"
+author:     "Kei Wu"
 header-img: "img/post-bg-06.jpg"
 ---
 
