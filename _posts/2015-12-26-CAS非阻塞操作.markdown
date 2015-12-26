@@ -1,0 +1,34 @@
+---
+layout:     post
+title:      "CAS非阻塞操作"
+subtitle:   ""
+date:       2015-12-26 15:38:00
+author:     "Kei Wu"
+header-img: "img/post-bg-05.jpg"
+---
+
+#### CAS
+CAS(compare and set)是一种无锁的非阻塞操作，能够提供并发情况下的非阻塞同步更新操作。  
+（一般是利用硬件的原子计算来替代锁操作的``unsafe.compareAndSwapObject(this, valueOffset, expect, update);``）  
+简单实现如下：
+````Java
+public final int compareAndSet(int newValue) {
+	for (;;) {
+		int current = get();
+		if (compareAndSwap(current, newValue))
+			return current;
+	}
+}
+public final boolean compareAndSwap(int expect, int update) {
+	return unsafe.compareAndSwapInt(this, valueOffset, expect, update);
+}
+````
+仅当内存上的值跟比较的expect值一样时，才进行更新update值操作操作。  
+多个线程竞争更新时，例如：A线程在执行get操作之后被B抢占了，B执行完set 2操作时，A继续执行，发现get到的值跟内存值不一样，
+则继续循环，直到更新完毕。  
+  
+#### 关于悲观锁和乐观锁  
+当一个线程访问某共享资源时，其他竞争此资源的线程必须进入阻塞状态，直到持锁线程访问完毕释放锁之后，共享资源才能被其他线程竞争。
+像synchronized，是一种悲观锁，JVM的实现是挂起阻塞线程，之后重新调度。由此很引起上下文的切换开销。
+所谓乐观锁就是指：对竞争资源不用加锁，而是假设没有冲突去完成某项操作，如果因为冲突失败就不断重试，直到成功为止。
+上面所说的循环CAS操作就是上述所说的乐观锁。  
