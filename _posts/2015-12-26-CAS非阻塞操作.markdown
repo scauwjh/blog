@@ -32,3 +32,6 @@ public final boolean compareAndSwap(int expect, int update) {
 像synchronized，是一种悲观锁，JVM的实现是挂起阻塞线程，之后重新调度。由此很引起上下文的切换开销。
 所谓乐观锁就是指：对竞争资源不用加锁，而是假设没有冲突去完成某项操作，如果因为冲突失败就不断重试，直到成功为止。
 上面所说的循环CAS操作就是上述所说的乐观锁。  
+  
+  
+参考：[http://www.cnblogs.com/ktgu/p/3529145.html](http://www.cnblogs.com/ktgu/p/3529145.html)
