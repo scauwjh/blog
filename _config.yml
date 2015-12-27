@@ -14,7 +14,7 @@ facebook_username:  none
 # highlighter: pygments
 markdown: redcarpet
 redcarpet:
-    extensions: ["fenced_code_blocks", "autolink", "tables", "strikethrough"]
-permalink: pretty
-paginate: 5
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+# permalink: pretty
+# paginate: 5
+# exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
