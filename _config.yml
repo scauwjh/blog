@@ -16,5 +16,5 @@ markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 # permalink: pretty
-# paginate: 5
-# exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
