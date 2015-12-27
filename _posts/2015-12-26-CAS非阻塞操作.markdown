@@ -34,4 +34,4 @@ public final boolean compareAndSwap(int expect, int update) {
 上面所说的循环CAS操作就是上述所说的乐观锁。  
   
   
-参考：[http://www.cnblogs.com/ktgu/p/3529145.html](http://www.cnblogs.com/ktgu/p/3529145.html)
+参考：[http://www.cnblogs.com/ktgu/p/3529145.html](http://www.cnblogs.com/ktgu/p/3529145.html).
