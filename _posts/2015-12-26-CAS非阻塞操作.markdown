@@ -11,7 +11,7 @@ header-img: "img/post-bg-05.jpg"
 CAS(compare and set)是一种无锁的非阻塞操作，能够提供并发情况下的非阻塞同步更新操作。  
 （一般是利用硬件的原子计算来替代锁操作的``unsafe.compareAndSwapObject(this, valueOffset, expect, update);``）  
 简单实现如下：
-```Java
+{% highlight java %}
 public final int compareAndSet(int newValue) {
 	for (;;) {
 		int current = get();
@@ -22,7 +22,7 @@ public final int compareAndSet(int newValue) {
 public final boolean compareAndSwap(int expect, int update) {
 	return unsafe.compareAndSwapInt(this, valueOffset, expect, update);
 }
-```
+{% endhighlight %}
 仅当内存上的值跟比较的expect值一样时，才进行更新update值操作操作。  
 多个线程竞争更新时，例如：A线程在执行get操作之后被B抢占了，B执行完set 2操作时，A继续执行，发现get到的值跟内存值不一样，
 则继续循环，直到更新完毕。  
