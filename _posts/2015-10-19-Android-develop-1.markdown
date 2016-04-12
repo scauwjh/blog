@@ -102,6 +102,6 @@ public class MainActivity extends Activity {
     // 省略...
 }
 {% endhighlight %}  
->
+>  
 ## Service
 Service主要用于处理一些耗时比较大的或者需要后台运行（保持运行）的逻辑。  
