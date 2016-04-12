@@ -50,7 +50,8 @@ layout：应用布局文件
 values：布局用的一些静态变量，如颜色、尺寸、风格、标题等等  
 ...  
 
-## 布局  
+## 布局
+
 ### 一、LinearLayout线性布局
 一般LinearLayout线性布局可以实现所有的基本的布局了，也是比较常用的布局方式之一  
 LinearLayout设置了水平排列方式，水平方向的设置是无效的，如：left，right，center_horizontal（android:orientation="horizontal"）  
