@@ -38,10 +38,10 @@ AndroidMainfest.xml位于项目的根目录，描述了应用的一些基本信�
     </application>
 </manifest>
 {% endhighlight %}
-最外层标签<manifest>主要属性有package、versionCode、installLocation等等，声明一些基础的信息  
-<uses-permission>声明应用所需要的一些权限，例如读写存储的权限  
-<intent-filter>里面包含一些action，android.intent.action.MAIN指定应用的入口，android.intent.category.LAUNCHER指定应用是否出现在Launcher里面  
-<service>用于定义后台服务，例如音乐播放器的核心播放器功能就应用到service来保持后台运行。（包含在application里面，一开始就是搞错位置导致启动失败。。）  
+最外层标签manifest主要属性有package、versionCode、installLocation等等，声明一些基础的信息  
+uses-permission声明应用所需要的一些权限，例如读写存储的权限  
+intent-filter里面包含一些action，android.intent.action.MAIN指定应用的入口，android.intent.category.LAUNCHER指定应用是否出现在Launcher里面  
+service用于定义后台服务，例如音乐播放器的核心播放器功能就应用到service来保持后台运行。（包含在application里面，一开始就是搞错位置导致启动失败。。）  
 
 ## res目录
 res目录下主要是应用的一些静态资源  
@@ -51,7 +51,6 @@ values：布局用的一些静态变量，如颜色、尺寸、风格、标题�
 ...  
 
 ## 布局
-
 ### 一、LinearLayout线性布局
 一般LinearLayout线性布局可以实现所有的基本的布局了，也是比较常用的布局方式之一  
 LinearLayout设置了水平排列方式，水平方向的设置是无效的，如：left，right，center_horizontal（android:orientation="horizontal"）  
@@ -102,7 +101,6 @@ public class MainActivity extends Activity {
     // 省略...
 }
 {% endhighlight %}  
-  
- 
+
 ## Service
 Service主要用于处理一些耗时比较大的或者需要后台运行（保持运行）的逻辑。  
