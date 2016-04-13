@@ -2,7 +2,7 @@
 layout:     post
 title:      "【读书笔记】《深入理解Java虚拟机：JVM高级特性与最佳实践（最新第二版）"
 subtitle:   "第二章：自动内存管理机制"
-date:       2015-10-19 01:08:00
+date:       2015-06-22 00:00:00
 author:     "Kei Wu"
 header-img: "img/post-bg-03.jpg"
 ---
