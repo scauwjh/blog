@@ -24,12 +24,8 @@ kramdown:
     coderay_tab_width: 4
     coderay_bold_every: 10
     coderay_css: class
-
-pygments: true
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "strikethrough","superscript"]
   
-highlighter: pygments
+highlighter: rouge
 permalink: pretty
 paginate: 5
 include: [".htaccess"]
