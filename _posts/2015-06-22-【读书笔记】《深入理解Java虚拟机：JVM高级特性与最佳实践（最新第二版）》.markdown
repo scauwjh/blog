@@ -16,7 +16,7 @@ header-img: "img/post-bg-03.jpg"
 <b style="color:red">方法区（Method Area）</b>与Java堆一样，是各个线程共享的内存区域，用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。别名Non-Heap（非堆），目的是为了跟Java堆区分开来。对于HotSpot虚拟机来讲，人们更愿意把方法区成为“永久代”（Permanent Generation）。HotSpot虚拟机把GC分代收集扩展至方法区，省去为方法区编写内存管理代码的工作。通过-XX:MaxPermSize设置永久代的上限制。（现在逐步改为采用Native Memory来实现方法区了）  
 <b style="color:red">运行时常量池（Runtime Constant Pool）</b>是方法区的一部分。用于存放编译期生成的各种字符变量和符号的引用，这部分内存将在类加载后进入常量池。运行期间也有可能将新的常量放入池中，例如String类的inern()方法。  
 <b style="color:red">直接内存（Direct Memory）</b>并不是虚拟机运行时数据区的一部分，也不是Java虚拟机规范中定义的内存区域，但这部分内存也被频繁使用。JDK1.4中新加入的NIO（New Input/Output）类，引入一种基于通道（Channel）与缓冲区的I/O方式，它可以使用Native函数库直接分配堆外内存，然后通过一个存储在Java堆中的DirectByteBuffer对象作为这块内存的引用进行操作。这样避免了Java堆和Native堆中来回复制数据，在一些场景中显著提高性能。  
-  
+-----------------------------------    
 
 ### 对象的创建
 虚拟机遇到一条new指令时，先去检查这个指令的参数是否能在常量池中定位到一个类的符号引用，并检查这个符号银哟个代表的类是否已加载、解析和初始化过，没有就先执行相应的加载过程。  
