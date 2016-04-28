@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:      "volatile的实现原理"
+title:      ""
 subtitle:   ""
 date:       
-author:     "Kei Wu"
-header-img: "img/post-bg-03.jpg"
+author:     ""
+header-img: ""
 ---
 
 ### Volatile的官方定义
