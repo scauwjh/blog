@@ -2,9 +2,9 @@
 layout:     post
 title:      "volatile的实现原理"
 subtitle:   ""
-date:       2016-04-28 11:45:30
+date:       2016-04-28 13:04:30
 author:     "Kei Wu"
-header-img: "img/post-bg-02.jpg"
+header-img: "img/post-bg-03.jpg"
 ---
 
 ### Volatile的官方定义
