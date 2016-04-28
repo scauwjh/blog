@@ -4,7 +4,7 @@ title:      "Volatile的实现原理"
 subtitle:   ""
 date:       2016-04-28
 author:     "Kei Wu"
-header-img: "img/post-bg-05.jpg"
+header-img: "img/post-bg-02.jpg"
 ---
 
 ### Volatile的官方定义
