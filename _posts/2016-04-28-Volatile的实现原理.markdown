@@ -1,10 +1,5 @@
 ---
 layout:     post
-title:      ""
-subtitle:   ""
-date:       
-author:     ""
-header-img: ""
 ---
 
 ### Volatile的官方定义
