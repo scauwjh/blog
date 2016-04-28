@@ -7,7 +7,7 @@ author:     "Kei Wu"
 header-img: "img/post-bg-05.jpg"
 ---
 
-#### CAS test
+#### CAS
 CAS(compare and set)是一种无锁的非阻塞操作，能够提供并发情况下的非阻塞同步更新操作。（一般是利用硬件的原子计算来替代锁操作的）    
 简单实现如下：
 {% highlight java %}
