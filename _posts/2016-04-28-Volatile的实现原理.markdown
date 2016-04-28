@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      "CAS非阻塞操作"
+title:      "Volatile的实现原理"
 subtitle:   ""
-date:       2015-12-26 15:38:00
+date:       2016-04-28
 author:     "Kei Wu"
 header-img: "img/post-bg-05.jpg"
 ---
