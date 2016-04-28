@@ -1,5 +1,10 @@
 ---
 layout:     post
+title:      "CAS非阻塞操作"
+subtitle:   ""
+date:       2015-12-26 15:38:00
+author:     "Kei Wu"
+header-img: "img/post-bg-05.jpg"
 ---
 
 ### Volatile的官方定义
