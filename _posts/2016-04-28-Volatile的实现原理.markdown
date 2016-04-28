@@ -1,5 +1,5 @@
 ---
-
+layout:     post
 ---
 
 ### Volatile的官方定义
