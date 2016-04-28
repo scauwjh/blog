@@ -2,7 +2,7 @@
 layout:     post
 title:      "Volatile的实现原理"
 subtitle:   ""
-date:       2016-04-28 07:00:00
+date:       2016-04-28
 author:     "Kei Wu"
 header-img: "img/post-bg-05.jpg"
 ---
