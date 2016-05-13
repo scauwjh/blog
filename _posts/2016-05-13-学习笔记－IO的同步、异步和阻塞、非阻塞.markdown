@@ -1,0 +1,36 @@
+---
+layout:     post
+title:      "学习笔记－IO的同步、异步和阻塞、非阻塞"
+subtitle:   ""
+date:       2016-05-13
+author:     "Kei Wu"
+header-img: "img/post-bg-03.jpg"
+---
+
+### 阻塞IO（blocking IO）
+linux默认情况下所有的socket都是blocking的。当用户进程调用recvfrom系统调用，kernel就开始准备数据。
+当数据还没准备好时（如network io中数据包还没收到），kernel需要等待足够的数据到来，用户进程被阻塞。
+当数据准备好后，它会讲数据从kernel拷贝到用户内存，然后返回结果，此时用户进程接触block状态。  
+blocking IO的特点是用户进程在IO执行的两个阶段都被block了。
+
+### 非阻塞IO（non-blocking IO）
+linux下可以设置socket为non-blocking。non-blocking下，当用户进程发出read操作时，如果kernel数据还没准备好，
+它并不会block住用户进程，而是立刻返回一个error。用户进程发起read操作后不需要等待，判断返回结果为error知道
+数据未准备好，然后再重复发送read操作。一旦kernel数据准备好，并且再次收到用户进程的read操作（recvfrom系统调用），
+就会马上拷贝数据到用户内存，然后返回。数据准备好并收到read操作，到返回这段时间，用户进程是被block住的。  
+non-blocking IO需要用户进程不断的主动询问kernel数据准备的情况。
+
+### IO多路复用（IO multiplexing）
+IO multiplexing又称为事件驱动IO（event driven IO），如select、epoll。select/epoll的好处就是可以在
+单个process上同时处理多个网络连接的IO，基本原理是select/epoll这个函数会不断轮询所负责的所有socket，
+当某个socket有数据到达就会通知用户进程。用户调用select，进程被block住，kernel会监视所有select负责的socket，
+当有一个socket数据准备好了，select就会返回。此时用户进程再进行read操作，将数据拷贝到用户内存。  
+IO multiplexing Model中，每一个socket都被设置成non-blocking，但是block住用户进程的不适socket IO，而是select函数。
+
+### 异步IO（asynchronous IO）
+linux下asynchronous IO比较少用的。用户进程发起read操作后，立刻可以去做其他事，kernel收到asynchronous read之后，
+立刻返回，不会对用户进程产生任何block。当kernel准备好数据之后，会讲数据拷贝到用户内存，完成后会给用户进程发送一个signal，
+告诉用户进程read操作完成了。
+
+
+参考：[http://blog.csdn.net/historyasamirror/article/details/5778378](http://blog.csdn.net/historyasamirror/article/details/5778378)
