@@ -7,6 +7,16 @@ author:     "Kei Wu"
 header-img: "img/post-bg-04.jpg"
 ---
 
+### 前言
+最近有个自动发送航班行程单的task，主要是针对出票成功的订单，把对应的邮箱里所收到的跟订单关联的邮件转发给用户。一开始以为就一个转发而已很容易，然后就开始简单撸起代码来了。由于读取的未读邮件，所以选用支持查找是否已读的imap协议，直接上jodd-mail，封装程度比较高代码量比较少。期间遇到不少问题，最后只能用比较底层的java-mail自己封装了，把整个邮件的结构过了一遍。
+
+### 遇到的问题
+撸好代码，本地写个test，发现read和send都没什么问题，于是直接挂到线上的测试环境去跑schedule了，然后就挂了。经过很多次的测试（把发件邮箱给搞挂了，被封了），发现了以下问题：
+> * JDK1.8下SSL握手失败
+> * 邮件内容缺少编码声明
+> * Message不可以设置编码header
+> * Message无法copy
+
 ### MIME邮件格式分析及信息提取
 <center>
 <a href="#">
@@ -14,3 +24,5 @@ header-img: "img/post-bg-04.jpg"
 </a>
 <span class="caption text-muted">邮件内容布局</span>
 </center>
+
+
