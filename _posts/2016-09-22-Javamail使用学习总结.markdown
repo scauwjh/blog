@@ -7,14 +7,6 @@ author:     "Kei Wu"
 header-img: "img/post-bg-04.jpg"
 ---
 
-### 这是个标题
-```flow
-st=>start: Start
-op=>operation: Your Operation
-cond=>condition: Yes or No?
-e=>end
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
+### MIME邮件格式分析及信息提取
+![](http://www.pythonclub.org/_media/python-files/mime-type.gif)
+<span class="caption text-muted">邮件内容布局</span>
