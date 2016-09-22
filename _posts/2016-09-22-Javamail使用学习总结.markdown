@@ -13,10 +13,10 @@ header-img: "img/post-bg-04.jpg"
 ### 遇到的问题
 撸好代码，本地写个test，发现read和send都没什么问题，于是直接挂到线上的测试环境去跑schedule了，然后就挂了。经过很多次的测试（把发件邮箱给搞挂了，被封了），发现了以下问题：
 <blockquote>
-> 1. JDK1.8下SSL握手失败
-> 2. 邮件内容缺少编码声明
-> 3. Message不可以设置编码header
-> 4. Message无法copy
+1. JDK1.8下SSL握手失败
+2. 邮件内容缺少编码声明
+3. Message不可以设置编码header
+4. Message无法copy
 </blockquote>
 
 ### MIME邮件格式分析及信息提取
