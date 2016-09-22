@@ -1,1 +1,10 @@
+---
+layout:     post
+title:      "Java mail 使用学习总结"
+subtitle:   ""
+date:       2016-09-22
+author:     "Kei Wu"
+header-img: "img/post-bg-05.jpg"
+---
 
+### 这是个标题
