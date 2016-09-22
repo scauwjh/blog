@@ -9,6 +9,8 @@ header-img: "img/post-bg-04.jpg"
 
 ### MIME邮件格式分析及信息提取
 <center>
-![](http://www.pythonclub.org/_media/python-files/mime-type.gif)
+<a href="#">
+    <img src="http://www.pythonclub.org/_media/python-files/mime-type.gif" alt="Email Content Image">
+</a>
 <span class="caption text-muted">邮件内容布局</span>
 </center>
