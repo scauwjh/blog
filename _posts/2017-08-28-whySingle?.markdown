@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "为什么“我”会单着？"
-subtitle:	"为什么“我”会单着？"
+subtitle:	"这是一个严肃的问题..."
 date:       2017-08-28 17:10:00
 author:     " Kei Wu"
 header-img: "img/post-bg-01.jpg"
